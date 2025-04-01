@@ -265,7 +265,7 @@ collections:
   "🎖️This Year's Oscar Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000003
       event_year: latest
@@ -276,6 +276,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/31)
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
@@ -286,7 +287,7 @@ collections:
   "🏆 Past Oscar Winners":
     summary: "Oscar-winning Movies"
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000003
       event_year: all
@@ -299,6 +300,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-03/31)
@@ -308,7 +310,7 @@ collections:
   # Only visible on home screen during Oscar season
   "🎬 This Year's Best Picture Nominees":
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     summary: "Who will take home the trophy?"
     imdb_award:
       event_id: ev0000003
@@ -325,6 +327,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/31)
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
@@ -335,7 +338,7 @@ collections:
   "🏆 Past Best Picture Winners":
     summary: "The Academy Award for Best Picture is one of the Academy Awards presented annually by the Academy of Motion Picture Arts and Sciences since the awards debuted in 1929."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000003
       event_year: all
@@ -351,6 +354,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: range(02/01-03/31)
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
@@ -361,7 +365,7 @@ collections:
   "🍓 This Year's Razzie Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000558
       event_year: latest
@@ -374,6 +378,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/31)
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
@@ -383,7 +388,7 @@ collections:
   # Only visible on home screen during Razzie season
   "🤮 Past Razzie Winners":
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     summary: "Previous Razzie Worst Picture winners"
     imdb_award:
       event_id: ev0000558
@@ -397,6 +402,7 @@ collections:
       - yearly(04/01)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-03/31)
@@ -407,7 +413,7 @@ collections:
   "🇬🇧 This Year's BAFTA Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000123
       event_year: latest
@@ -420,6 +426,7 @@ collections:
       - yearly(03/06)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/05)
     visible_shared: range(02/01-03/05)
     visible_library: range(02/01-03/05)
@@ -430,7 +437,7 @@ collections:
   "🇬🇧 Past BAFTA Best Film Winners":
     summary: "The EE British Academy Film Awards or BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000123
       event_year: all
@@ -443,6 +450,7 @@ collections:
       - yearly(03/06)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-03/05)
@@ -453,7 +461,7 @@ collections:
   "🇩🇪 This Year's Berlinale Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000091
       event_year: latest
@@ -466,6 +474,7 @@ collections:
       - yearly(03/08)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/07)
     visible_shared: range(02/01-03/07)
     visible_library: range(02/01-03/07)
@@ -476,7 +485,7 @@ collections:
   "🇩🇪 Past Berlinale Winners":
     summary: "The Berlin International Film Festival, usually called the Berlinale, is a film festival held annually in Berlin, Germany."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000091
       event_year: all
@@ -489,6 +498,7 @@ collections:
       - yearly(03/08)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-03/07)
@@ -499,7 +509,7 @@ collections:
   "🕊️ This Year's Cannes Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000147
       event_year: latest
@@ -512,6 +522,7 @@ collections:
       - yearly(06/10)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(05/01-06/09)
     visible_shared: range(05/01-06/09)
     visible_library: range(05/01-06/09)
@@ -522,7 +533,7 @@ collections:
   "🕊️ Past Cannes Winners":
     summary: "The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries, from all around the world."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000147
       event_year: all
@@ -535,6 +546,7 @@ collections:
       - yearly(06/10)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(05/01-06/09)
@@ -545,7 +557,7 @@ collections:
   "🇫🇷 This Year's Cesar Award Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000157
       event_year: latest
@@ -558,6 +570,7 @@ collections:
       - yearly(03/03)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-03/02)
     visible_shared: range(02/01-03/02)
     visible_library: range(02/01-03/02)
@@ -568,7 +581,7 @@ collections:
   "🇫🇷 Past Cesar Award Winners":
     summary: "The César Award is the national film award of France. It is delivered in the Nuit des César ceremony and was first awarded in 1976."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000157
       event_year: all
@@ -581,6 +594,7 @@ collections:
       - yearly(03/03)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-03/02)
@@ -591,7 +605,7 @@ collections:
   "🇺🇸 This Year's Sundance Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000631
       event_year: latest
@@ -604,6 +618,7 @@ collections:
       - yearly(02/13)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(01/13-02/12)
     visible_shared: range(01/13-02/12)
     visible_library: range(01/13-02/12)
@@ -614,7 +629,7 @@ collections:
   "🇺🇸 Past Sundance Winners":
     summary: "Sundance is the largest independent film festival in the United States. Held in January, the festival is the premier showcase for new work from American and international independent filmmakers."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000631
       event_year: all
@@ -627,6 +642,7 @@ collections:
       - yearly(02/13)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(01/13-02/12)
@@ -635,7 +651,7 @@ collections:
   "🇮🇹 This Year's Venice Film Festival Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000681
       event_year: latest
@@ -648,6 +664,7 @@ collections:
       - yearly(09/21)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(08/21-09/20)
     visible_shared: range(08/21-09/20)
     visible_library: range(08/21-09/20)
@@ -658,7 +675,7 @@ collections:
   "🇮🇹 Past Venice Film Festival Winners":
     summary: "The Venice Film Festival or Venice International Film Festival (Italian: Mostra Internazionale d'Arte Cinematografica della Biennale di Venezia is the world's oldest film festival"
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000681
       event_year: all
@@ -671,6 +688,7 @@ collections:
       - yearly(09/21)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(08/21-09/20)
@@ -681,7 +699,7 @@ collections:
   "🇨🇦 This Year's Toronto Film Festival Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000659
       event_year: latest
@@ -693,6 +711,7 @@ collections:
       - all[weekly(friday),range(09/01-09/30)]
       - yearly(10/01)
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(09/01-09/30)
     visible_shared: range(09/01-09/30)
     visible_library: range(09/01-09/30)
@@ -703,7 +722,7 @@ collections:
   "🇨🇦 Past Toronto Film Festival Winners":
     summary: "The Toronto International Film Festival is one of the largest publicly attended film festivals in the world, attracting over 480,000 people annually."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000659
       event_year: all
@@ -716,6 +735,7 @@ collections:
       - yearly(10/01)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(09/01-09/30)
@@ -726,7 +746,7 @@ collections:
   "✅ This Year's People's Choice Awards Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000530
       event_year: latest
@@ -746,6 +766,7 @@ collections:
       - all[weekly(friday),range(02/01-02/28)]
       - yearly(03/01)
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(02/01-02/29)
     visible_shared: range(02/01-02/29)
     visible_library: range(02/01-02/29)
@@ -756,7 +777,7 @@ collections:
   "✅ Past People's Choice Awards Winners":
     summary: "The People's Choice Awards is an American awards show, recognizing the people and the work of popular culture."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000530
       event_year: all
@@ -777,6 +798,7 @@ collections:
       - yearly(03/01)
       # You have to schedule it to run again after visibility timeframe for visibility to switch back
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(02/01-02/29)
@@ -787,7 +809,7 @@ collections:
   "🏛️ This Year's National Film Registry Inductees":
     summary: "Who has been inducted into the National Film Registry this year?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000468
       event_year: latest
@@ -800,6 +822,7 @@ collections:
       - yearly(01/08)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: random
+    sync_mode: sync # Delete old items
     visible_home: range(12/01-01/07)
     visible_shared: range(12/01-01/07)
     visible_library: range(12/01-01/07)
@@ -810,7 +833,7 @@ collections:
   "🏛️ Past National Film Registry Inductees":
     summary: "The National Film Registry (NFR) is the United States National Film Preservation Board's selection of films for preservation in the Library of Congress."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000468
       event_year: all
@@ -823,6 +846,7 @@ collections:
       - yearly(01/08)
       # You have to schedule it to run before and after visibility timeframe for visibility to switch
     collection_order: release.desc
+    sync_mode: append
     visible_home: false
     visible_shared: false
     visible_library: range(12/01-01/07)
@@ -834,10 +858,10 @@ collections:
   # This current year's Best Actor Oscar nominees
   # Only visible on home screen during Oscar season
 
-  "🎭 2024 Best Actor Nominee - Bradley Cooper":
+  "🎭 2025 Best Actor Nominee - Adrian Brody":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 51329 }
+                level: "_____",
+                tmdb_id: 3490 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -847,10 +871,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actor Nominee - Colman Domingo":
+  "🎭 2025 Best Actor Nominee - Timothée Chalamet":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 91671 }
+                level: "_____",
+                tmdb_id: 1190668 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -860,10 +884,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actor Nominee - Paul Giamatti":
+  "🎭 2025 Best Actor Nominee - Colman Domingo":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 13242 }
+                level: "_____",
+                tmdb_id: 91671 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -873,10 +897,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actor Nominee - Cillian Murphy":
+  "🎭 2025 Best Actor Nominee - Ralph Fiennes":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 2037 }
+                level: "_____",
+                tmdb_id: 5469 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -886,10 +910,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actor Nominee - Jeffrey Wright":
+  "🎭 2025 Best Actor Nominee - Sebastian Stan":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 2954 }
+                level: "_____",
+                tmdb_id: 60898 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -906,10 +930,10 @@ collections:
   # This current year's Best Actress Oscar nominees
   # Only visible on home screen during Oscar season
 
-  "🎭 2024 Best Actress Nominee - Annette Bening":
+  "🎭 2025 Best Actress Nominee - Cynthia Erivo":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 516 }
+                level: "_____",
+                tmdb_id: 1765068 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -919,10 +943,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actress Nominee - Lily Gladstone":
+  "🎭 2025 Best Actress Nominee - Karla Sofía Gascón":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 1183917 }
+                level: "_____",
+                tmdb_id: 1505938 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -932,10 +956,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actress Nominee - Sandra Hüller":
+  "🎭 2025 Best Actress Nominee - Mikey Madison":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 7152 }
+                level: "_____",
+                tmdb_id: 1640439 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -945,10 +969,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actress Nominee - Carey Mulligan":
+  "🎭 2025 Best Actress Nominee - Demi Moore":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 36662 }
+                level: "_____",
+                tmdb_id: 3416 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]
@@ -958,10 +982,10 @@ collections:
     visible_shared: range(02/01-03/31)
     visible_library: range(02/01-03/31)
 
-  "🎭 2024 Best Actress Nominee - Emma Stone":
+  "🎭 2025 Best Actress Nominee - Fernanda Torres":
     template: { name: ActorAward,
-                level: "+++++",
-                tmdb: 54693 }
+                level: "_____",
+                tmdb_id: 87335 }
     schedule:
       - yearly(02/01)
       - all[weekly(friday),range(02/01-03/31)]

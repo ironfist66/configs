@@ -2,6 +2,8 @@ external_templates:
   - repo: templates/collections
   - repo: templates/dynamic_collections
 
+collections: {}
+
 templates:
   # TODO: Figure out year delay for awards (2023 awards given in 2024, so when collection runs in 2024, it needs to look up 2023)
   # This is not true for all awards (some are given in the same year)
@@ -64,7 +66,7 @@ collections:
   "✅ This Year's People's Choice Awards Nominees":
     summary: "Who will take home the trophy?"
     template: { name: Award,
-                level: "+++" }
+                level: "___" }
     imdb_award:
       event_id: ev0000530
       event_year: latest
@@ -90,7 +92,7 @@ collections:
   "✅ Past People's Choice Awards Winners":
     summary: "The People's Choice Awards is an American awards show, recognizing the people and the work of popular culture."
     template: { name: Award,
-                level: "++" }
+                level: "__" }
     imdb_award:
       event_id: ev0000530
       event_year: all

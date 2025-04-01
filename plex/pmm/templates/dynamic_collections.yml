@@ -4,32 +4,31 @@ external_templates:
 templates:
   # Dynamic Collections Templates
   # -----------------------------
-  Per_Decade:
-    default:
-      level: "++"
-    smart_filter:
-      sort_by: audience_rating.desc
-      all:
-        year.gte: <<key_name>>
-        year.lte: <<ending>>
-    sort_title: 079_+<<level>>_<<starting>>
-    url_poster: https://raw.githubusercontent.com/zluckytraveler/Plex-Meta-Manager-Configs/master/zluckytraveler/Posters/Decades/<<starting>>.png
-    visible_library: false
-    visible_shared: false
-    visible_home: false
-    schedule:
-      - monthly(16)
+  # Per_Decade:
+  #   default:
+  #     level: "++"
+  #   smart_filter:
+  #     sort_by: audience_rating.desc
+  #     all:
+  #       year.gte: <<key_name>>
+  #       year.lte: <<ending>>
+  #   sort_title: 079_+<<level>>_<<starting>>
+  #   url_poster: https://raw.githubusercontent.com/zluckytraveler/Plex-Meta-Manager-Configs/master/zluckytraveler/Posters/Decades/<<starting>>.png
+  #   visible_library: false
+  #   visible_shared: false
+  #   visible_home: false
+  #   schedule:
+  #     - monthly(16)
 
   Per_Genre:
     smart_filter:
-      limit: 10000
       sort_by: critic_rating.desc
       all:
         genre: <<value>>
     default:
-      level: "++"
-      sort_title: 069_+<<level>>_<<key_name>>
-    url_poster: 'https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/genre/<<key_name>>.jpg'
+      level: ""
+    sort_title: 070__<<level>>_<<key_name>>
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/genre/<<key_name>>.jpg
     visible_library: false
     visible_shared: false
     visible_home: false
@@ -37,16 +36,48 @@ templates:
       - weekly(monday)
       - weekly(thursday)
 
+  Best_Of_Decade:
+    smart_filter:
+      limit: 1000
+      sort_by: audience_rating.desc
+      all:
+        year.gte: <<key_name>>
+        year.lte: <<ending>>
+    default:
+      level: ""
+    sort_title: 080__<<level>>_<<starting>>
+    url_poster: https://raw.githubusercontent.com/zluckytraveler/Plex-Meta-Manager-Configs/master/zluckytraveler/Posters/Decades/<<starting>>.png
+    visible_library: false
+    visible_shared: false
+    visible_home: false
+    schedule:
+      - monthly(16)
+
+  Per_Decade:
+    smart_filter:
+      sort_by: audience_rating.desc
+      all:
+        year.gte: <<key_name>>
+        year.lte: <<ending>>
+    default:
+      level: ""
+    sort_title: 081__<<level>>_<<starting>>
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/decade/<<starting>>.jpg
+    visible_library: false
+    visible_shared: false
+    visible_home: false
+    schedule:
+      - monthly(16)
+
   Per_Country:
     smart_filter:
-      limit: 10000
       sort_by: critic_rating.desc
       any:
         country: <<value>>
     default:
-      level: "++"
-    sort_title: 110_+<<level>>_<<key_name>>
-    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/country/white/<<key_name>>.jpg"
+      level: ""
+    sort_title: 110__<<level>>_<<key_name>>
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/country/white/<<key_name>>.jpg
     visible_library: false
     visible_shared: false
     visible_home: false
@@ -59,8 +90,8 @@ templates:
       any:
         audio_language: <<value>>
     default:
-      level: "++"
-    sort_title: 115_+<<level>>_<<key_name>>
+      level: ""
+    sort_title: 115__<<level>>_<<key_name>>
     url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/audio_language/<<value>>.jpg
     visible_library: false
     visible_shared: false

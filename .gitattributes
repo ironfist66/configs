@@ -1,0 +1,10 @@
+# Make sure to exclude the .gitattributes file itself from encryption
+.gitattributes !filter !diff
+
+# Encrypt the following files
+plex/pmm/config.yml filter=git-crypt diff=git-crypt
+plex/pmm/Makefile filter=git-crypt diff=git-crypt
+plex/retro-replay/config.yml filter=git-crypt diff=git-crypt
+plex/retro-replay/Makefile filter=git-crypt diff=git-crypt
+plex/tauticord/tauticord.yaml filter=git-crypt diff=git-crypt
+plex/tauticord/Makefile filter=git-crypt diff=git-crypt

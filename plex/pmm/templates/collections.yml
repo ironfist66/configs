@@ -8,24 +8,23 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 000_+<<level>>_<<sort_title_name>>
+    sort_title: 000__<<level>>_<<sort_title_name>>
     sync_mode: sync
-    schedule:
-      - daily # Override this in the collection
+    delete_not_scheduled: true
     visible_library: true
+    visible_shared: true
+    visible_home: true
     url_poster: <<poster_url>>
 
   InMemoriamActor:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    tmdb_person: <<tmdb_id>>
-    smart_filter:
-      sort_by: release.desc
-      any:
-        actor: tmdb
-      sort_title: 001_+<<level>>_<<sort_title_name>>
-      sync_mode: append
+    tmdb_actor_details: <<tmdb_id>>
+    sort_title: 001__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    delete_not_scheduled: true
+    minimum_items: 3
     visible_library: true
     visible_shared: true
     visible_home: true
@@ -34,13 +33,37 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    tmdb_person: <<tmdb_id>>
-    smart_filter:
-      sort_by: release.desc
-      any:
-        director: tmdb
-      sort_title: 002_+<<level>>_<<sort_title_name>>
-      sync_mode: append
+    tmdb_director_details: <<tmdb_id>>
+    sort_title: 002__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    delete_not_scheduled: true
+    minimum_items: 3
+    visible_library: true
+    visible_shared: true
+    visible_home: true
+
+  InMemoriamProducer:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_producer_details: <<tmdb_id>>
+    sort_title: 003__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    delete_not_scheduled: true
+    minimum_items: 3
+    visible_library: true
+    visible_shared: true
+    visible_home: true
+
+  InMemoriamWriter:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_writer_details: <<tmdb_id>>
+    sort_title: 004__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    delete_not_scheduled: true
+    minimum_items: 3
     visible_library: true
     visible_shared: true
     visible_home: true
@@ -51,7 +74,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 010_+<<level>>_<<sort_title_name>>
+    sort_title: 010__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - daily
@@ -64,7 +87,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 040_+<<level>>_<<sort_title_name>>
+    sort_title: 040__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - daily
@@ -77,7 +100,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 050_+<<level>>_<<sort_title_name>>
+    sort_title: 050__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - weekly(sunday)
@@ -88,12 +111,41 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    smart_filter: # smart filter means Plex will automatically update the collection when new movies are added, rather than having to rerun the script
-      sort_by: release.desc
-      all:
-        actor: tmdb
-    tmdb_person: <<tmdb>>
-    sort_title: 052_+<<level>>_<<sort_title_name>>
+    tmdb_actor_details: <<tmdb_id>>
+    sort_title: 052__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    schedule:
+      - weekly(sunday)
+    visible_library: false
+
+  DirectorAward:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_director_details: <<tmdb_id>>
+    sort_title: 053__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    schedule:
+      - weekly(sunday)
+    visible_library: false
+
+  ProducerAward:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_producer_details: <<tmdb_id>>
+    sort_title: 054__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    schedule:
+      - weekly(sunday)
+    visible_library: false
+
+  WriterAward:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_writer_details: <<tmdb_id>>
+    sort_title: 055__<<level>>_<<sort_title_name>>
     sync_mode: append
     schedule:
       - weekly(sunday)
@@ -105,11 +157,11 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 060_+<<level>>_<<sort_title_name>>
-    sync_mode: sync
+    sort_title: 060__<<level>>_<<sort_title_name>>
+    sync_mode: append
     url_poster: <<poster_url>>
     # minimum_items: 3  # cannot be used in combination with builder_level
-    delete_not_scheduled: true
+    # delete_not_scheduled: true
     visible_home: false
     visible_shared: false
     visible_library: false
@@ -120,8 +172,8 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 065_+<<level>>_<<sort_title_name>>
-    sync_mode: sync
+    sort_title: 065__<<level>>_<<sort_title_name>>
+    sync_mode: append
     schedule:
       - weekly(tuesday)
       - weekly(friday)
@@ -134,8 +186,8 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 065_+<<level>>_<<sort_title_name>>
-    sync_mode: sync
+    sort_title: 066__<<level>>_<<sort_title_name>>
+    sync_mode: sync  # Match collection exactly
     schedule:
       - weekly(wednesday)
       - weekly(saturday)
@@ -148,7 +200,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 070_+<<level>>_<<sort_title_name>>
+    sort_title: 070__<<level>>_<<sort_title_name>>
     sync_mode: append
     schedule:
       - weekly(monday)
@@ -162,8 +214,8 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 079_+<<level>>_<<sort_title_name>>
-    sync_mode: sync
+    sort_title: 080__<<level>>_<<sort_title_name>>
+    sync_mode: append
     schedule:
       - weekly(monday)
       - weekly(thursday)
@@ -181,8 +233,10 @@ templates:
         director: tmdb
         producer: tmdb
         writer: tmdb
-    tmdb_person: <<person>>
-    sort_title: 090_+<<level>>_<<sort_title_name>>
+    # Unlike other templates, which use TMDb as the source of media items, this simply uses the TMDb ID to find the corresponding person on Plex and use Plex's metadata as the source of media items.
+    # It is possible (likely) that TMDb reports a person being in a media item that Plex does not, up to and including Plex not having any media items for that person and therefore not recognizing the person as a valid actor/director/producer/writer.
+    tmdb_person: <<tmdb_id>>
+    sort_title: 090__<<level>>_<<sort_title_name>>
     sync_mode: append
     visible_library: false
 
@@ -190,8 +244,8 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    tmdb_actor_details: <<person>>
-    sort_title: 090_+<<level>>_<<sort_title_name>>
+    tmdb_actor_details: <<tmdb_id>>
+    sort_title: 090__<<level>>_<<sort_title_name>>
     sync_mode: append
     visible_library: false
 
@@ -199,8 +253,8 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    tmdb_director_details: <<person>>
-    sort_title: 092_+<<level>>_<<sort_title_name>>
+    tmdb_director_details: <<tmdb_id>>
+    sort_title: 091__<<level>>_<<sort_title_name>>
     sync_mode: append
     visible_library: false
 
@@ -208,8 +262,17 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    tmdb_producer_details: <<person>>
-    sort_title: 092_+<<level>>_<<sort_title_name>>
+    tmdb_producer_details: <<tmdb_id>>
+    sort_title: 092__<<level>>_<<sort_title_name>>
+    sync_mode: append
+    visible_library: false
+
+  Writer:
+    default:
+      level: ""
+      sort_title_name: <<collection_name>>
+    tmdb_writer_details: <<tmdb_id>>
+    sort_title: 093__<<level>>_<<sort_title_name>>
     sync_mode: append
     visible_library: false
 
@@ -219,7 +282,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster
-    sort_title: 100_+<<level>>_<<sort_title_name>>
+    sort_title: 100__<<level>>_<<sort_title_name>>
     smart_filter:
       sort_by: release.desc
       validate: false
@@ -235,7 +298,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster
-    sort_title: 100_+<<level>>_<<sort_title_name>>
+    sort_title: 100__<<level>>_<<sort_title_name>>
     smart_filter:
       sort_by: title.desc
       validate: false
@@ -251,7 +314,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 110_+<<level>>_<<sort_title_name>>
+    sort_title: 110__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - weekly(saturday)
@@ -264,7 +327,7 @@ templates:
       sort_title_name: <<collection_name>>
     optional:
       - poster_url
-    sort_title: 115_+<<level>>_<<sort_title_name>>
+    sort_title: 115__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - weekly(saturday)
@@ -275,7 +338,7 @@ templates:
     default:
       level: "++"
       sort_title_name: <<collection_name>>
-    sort_title: 120_+<<level>>_<<sort_title_name>>
+    sort_title: 120__<<level>>_<<sort_title_name>>
     sync_mode: sync
     schedule:
       - daily
