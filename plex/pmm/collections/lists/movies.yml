@@ -229,7 +229,7 @@ collections:
     name_mapping: "James Bond Collection"
     summary: "007 forever"
     mdblist_list: https://mdblist.com/lists/hdlists/james-bond-movies
-    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/James Bond 007.jpg"
+    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/James%20Bond%20007.jpg"
     collection_order: release
     # default schedule
     visible_library: false
@@ -298,7 +298,7 @@ collections:
     template: { name: Franchise, sort_title: "Star Trek", level: "_" }
     trakt_list:
       - https://trakt.tv/users/dgw/lists/star-trek-canon
-    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Star Trek.jpg"
+    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Star%20Trek.jpg"
     url_background: https://i.redd.it/vz20prnp8v551.jpg
     collection_order: release
     # default schedule
@@ -311,7 +311,7 @@ collections:
     template: { name: Franchise, sort_title: "Star Wars", level: "_" }
     trakt_list_details:
       - https://trakt.tv/users/sonicwarrior/lists/star-wars-canon-timeline
-    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Star Wars.jpg"
+    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Star%20Wars.jpg"
     url_background: https://images.unsplash.com/photo-1579566346927-c68383817a25
     collection_order: custom
     # default schedule
