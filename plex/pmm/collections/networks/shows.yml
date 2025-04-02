@@ -577,7 +577,7 @@ collections:
     visible_home: false
     visible_shared: false
 
-  Syfy:
+  SyFy:
     template: { name: Network,
                 network: ["Syfy"],
                 poster: https://theposterdb.com/api/assets/113269 }
