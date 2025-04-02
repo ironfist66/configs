@@ -141,18 +141,18 @@ collections:
     visible_home: false
     visible_shared: false
 
-  "🎙️ Nate Reviews":
-    template: { name: Collection, sort_title: "Nate Reviews", level: "__" }
-    summary: "Every movie from the Nate Reviews YouTube series"
-    letterboxd_list:
-      - https://letterboxd.com/nwithan8/list/nate-reviews/
-    collection_order: release.desc
-    sync_mode: append
-    schedule:
-      - daily
-    visible_library: false
-    visible_home: false
-    visible_shared: false
+  # "🎙️ Nate Reviews":
+  #   template: { name: Collection, sort_title: "Nate Reviews", level: "__" }
+  #   summary: "Every movie from the Nate Reviews YouTube series"
+  #   letterboxd_list:
+  #     - https://letterboxd.com/nwithan8/list/nate-reviews/
+  #   collection_order: release.desc
+  #   sync_mode: append
+  #   schedule:
+  #     - daily
+  #   visible_library: false
+  #   visible_home: false
+  #   visible_shared: false
 
   ### LISTS ###
 
@@ -162,6 +162,7 @@ collections:
         name: Collection,
         sort_title: "1001 Movies You Must See Before You Die",
         level: "__",
+        poster_url: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/genre/1001%20Movies%20You%20Must%20See%20Before%20You%20Die.jpg",
       }
     name_mapping: "1001 Movies You Must See Before You Die Collection"
     # summary provided by Trakt
@@ -271,6 +272,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/andersonwallacerj/lists/batman
     collection_order: release
+    url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Batman.jpg"
     # default schedule
     visible_library: false
     visible_home: false
@@ -380,7 +382,7 @@ collections:
         name: Franchise,
         sort_title: "Stephen King",
         level: "_",
-        poster: "https://i.redd.it/sz63m6aex2g31.png",
+        poster_url: "https://i.redd.it/sz63m6aex2g31.png",
       }
     smart_filter:
       all:
