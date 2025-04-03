@@ -1,6 +1,8 @@
 external_templates:
   git: PMM/collections
 
+collections: {}
+
 templates:
   Promoted:
     default:
@@ -187,7 +189,7 @@ templates:
     optional:
       - poster_url
     sort_title: 066__<<level>>_<<sort_title_name>>
-    sync_mode: sync  # Match collection exactly
+    sync_mode: sync # Match collection exactly
     schedule:
       - weekly(wednesday)
       - weekly(saturday)

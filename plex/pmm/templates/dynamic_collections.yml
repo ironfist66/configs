@@ -1,6 +1,8 @@
 external_templates:
   - repo: templates/collections
 
+collections: {}
+
 templates:
   # Dynamic Collections Templates
   # -----------------------------
