@@ -374,6 +374,3 @@ dynamic_collections:
       - Per_Genre
     key_name_override:
       Film-Noir: Film Noir
-      Martial Arts: Martial%20Arts
-      TV Movie: TV%20Movie
-      Science Fiction: Science%20Fiction
