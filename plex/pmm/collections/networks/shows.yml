@@ -436,7 +436,7 @@ collections:
   MTV:
     template: { name: Network,
                 network: ["MTV", "MTV (AU/NZ)", "MTV (UK)", "MTV2", "MTV3"],
-                poster: https://theposterdb.com/api/assets/113202 }
+                poster: https://theposterdb.com/api/assets/113201 }
     summary: "Shows Aired on MTV"
     visible_library: false
     visible_home: false
