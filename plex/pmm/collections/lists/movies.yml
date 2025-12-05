@@ -195,18 +195,18 @@ collections:
     visible_home: false
     visible_shared: false
 
-  "📽️ The Criterion Collection":
-    template:
-      { name: Collection, sort_title: "The Criterion Collection", level: "__" }
-    # summary provided by Trakt
-    trakt_list_details:
-      - https://trakt.tv/users/i-really-am-maxwell-gmail-com/lists/the-criterion-collection
-    collection_order: critic_rating.desc
-    sync_mode: sync # Match collection exactly
-    # default schedule
-    visible_library: false
-    visible_home: false
-    visible_shared: false
+  # "📽️ The Criterion Collection":
+  #   template:
+  #     { name: Collection, sort_title: "The Criterion Collection", level: "__" }
+  #   # summary provided by Trakt
+  #   trakt_list_details:
+  #     - https://trakt.tv/users/i-really-am-maxwell-gmail-com/lists/the-criterion-collection
+  #   collection_order: critic_rating.desc
+  #   sync_mode: sync # Match collection exactly
+  #   # default schedule
+  #   visible_library: false
+  #   visible_home: false
+  #   visible_shared: false
 
   ### GENERAL ###
 
