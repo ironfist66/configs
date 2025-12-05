@@ -200,7 +200,7 @@ collections:
       { name: Collection, sort_title: "The Criterion Collection", level: "__" }
     # summary provided by Trakt
     trakt_list_details:
-      - https://trakt.tv/users/maxwelldeux/lists/the-criterion-collection
+      - https://trakt.tv/users/i-really-am-maxwell-gmail-com/lists/the-criterion-collection
     collection_order: critic_rating.desc
     sync_mode: sync # Match collection exactly
     # default schedule
@@ -215,7 +215,6 @@ collections:
     summary: "Make it a Blockbuster Night"
     trakt_list:
       - https://trakt.tv/users/padawan_seneca/lists/childhood-vhs-movies
-      # - https://trakt.tv/users/steffe73/lists/filmer-som-jag-har-pa-vhs
     collection_order: random
     sync_mode: sync # Match collection exactly
     # default schedule
@@ -243,7 +242,7 @@ collections:
     name_mapping: "Marvel Cinematic Universe Collection"
     summary: "The Marvel Cinematic Universe"
     trakt_list:
-      - https://trakt.tv/users/cinhd/lists/mcu-7ec3e8ef-7474-434f-9a47-525ba6cb6bd0
+      - https://trakt.tv/users/cinhd/lists/marvel-cinematic-universe?sort=rank%2Casc
     collection_order: release
     url_poster: "https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/franchise/Marvel%20Cinematic%20Universe.jpg"
     # default schedule
